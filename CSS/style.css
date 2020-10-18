@@ -34,8 +34,8 @@
   }
   
   .pizza-image{
-    width: 80%;
-    margin-left: 10%;
+    width: 65%;
+    margin-left:0;
   }
   
   .PB {
@@ -62,3 +62,11 @@
     font-weight:100;
   }
   
+  footer {
+    height: 25px;
+    background: #333;
+    margin: auto;
+    position: relative;
+    width: 25%;
+    text-align: center;
+  }
