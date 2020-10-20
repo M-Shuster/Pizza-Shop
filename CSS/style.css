@@ -5,8 +5,16 @@
     padding: 5px 10px;
     font-size: 16px;
     cursor: pointer;
-    width: 35%
+    width: 25%
   }
+
+.Btn:hover {background-color: #202020}
+
+.Btn:active {
+  background-color: #202020;
+  box-shadow: 0 5px #666;
+  transform: translateY(3px);
+}
   
   body {
     background-color: #f4f4f4;
@@ -23,7 +31,7 @@
   }
   
   .inner {
-   width: 60%;
+   width: 50%;
    background-color: grey;
    padding: 25px;
    border-radius: 10px;
@@ -31,11 +39,6 @@
    flex-wrap: wrap;
    align-items: center;
    flex-direction: column;
-  }
-  
-  .pizza-image{
-    width: 65%;
-    margin-left:0;
   }
   
   .PB {
@@ -53,7 +56,6 @@
   .PT {
     color: #000;
     font-weight: 700;
-  
   }
   
   
@@ -70,3 +72,81 @@
     width: 25%;
     text-align: center;
   }
+
+* {box-sizing:border-box}
+
+
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+.pizza-image{
+  width: 50%;
+  height: 500px;
+  margin-left:25%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.pizza-image:hover {
+  opacity: 0.6;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: fixed;
+  top: 65%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+.next {
+  right: 25%;
+}
+
+.prev {
+  left: 25%;
+}
+
+.prev:hover, .next:hover {
+  color: #333;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.75s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
