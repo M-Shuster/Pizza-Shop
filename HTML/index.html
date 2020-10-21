@@ -3,7 +3,7 @@
 
   <head>
     <script src="/JS/PizzaGenerator.js"></script>
-    <script src="/JS/PizzaCarousel.js"></script>
+    <script src="/JS/PizzaCarousel2.js"></script>
     <link rel="stylesheet" href="/CSS/style.css">
   </head>
 
@@ -42,29 +42,24 @@
   </br>
     <div class="SlideshowContainer">
 
-      <div class="pizzaSlides fade">
-        <img class="pizza-image" src="https://food-images.files.bbci.co.uk/food/recipes/alpine_pizza_32132_16x9.jpg" alt="Pizza1">
-      </div>
-    
-      <div class="pizzaSlides fade">
-        <img class="pizza-image" src="https://images.unsplash.com/photo-1574126154517-d1e0d89ef734?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max" alt="Pizza2">
-      </div>
-    
-      <div class="pizzaSlides fade">
-        <img class="pizza-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Kartoffel_pizza_%28with_border%29.jpg/1200px-Kartoffel_pizza_%28with_border%29.jpg"  alt="Pizza3">
+      <div class="pizzaSlides">
+        <img id="pizzaImage" class="pizza-image" src="" alt="Pizza1">
       </div>
 
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="arrows prev" onclick="moveSliderLeft()">&#10094;</a>
+      <a class="arrows next" onclick="moveSliderRight()">&#10095;</a>
     </div>
 
     <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="setPizzaImage(0)"></span>
+      <span class="dot" onclick="setPizzaImage(1)"></span>
+      <span class="dot" onclick="setPizzaImage(2)"></span>
     </div>
 
-
+    <script type="text/javascript">
+      // This will be run when the page is ready, set the first image. 
+      setPizzaImage(0);
+    </script>
   </body>
 
   <footer id="main-footer">
